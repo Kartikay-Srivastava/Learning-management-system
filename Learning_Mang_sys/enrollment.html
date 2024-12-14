@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Courses</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <h2 class="cou">Courses</h2>
+    <div class="container">
+        
+        <div id="course-list"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const courses = [
+                { id: 1, title: 'Digital Marketing', description: 'This is the description for Course 1' },
+                { id: 2, title: 'Corporate Laws', description: 'This is the description for Course 2' },
+                { id: 3, title: 'Supply Chain Management', description: 'This is the description for Course 3' },
+                { id: 4, title: 'Social Psychology', description: 'This is the description for Course 4' },
+            ];
+
+            const courseList = document.getElementById('course-list');
+
+            courses.forEach(course => {
+                const courseDiv = document.createElement('div');
+                courseDiv.className = 'course';
+                courseDiv.innerHTML = `
+                    <h3>${course.title}</h3>
+                    <p>${course.description}</p>
+                    <button onclick="window.location.href='progress.html'">Enroll</button>
+                `;
+                courseList.appendChild(courseDiv);
+            });
+        });
+    </script>
+</body>
+</html>
