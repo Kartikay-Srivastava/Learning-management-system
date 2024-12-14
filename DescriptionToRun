@@ -1,0 +1,7 @@
+# Learning-management-system
+
+
+Save all the files with the same name in php
+install xampp server .
+after succesful installation,start apache and my sql.
+go to brower type "localhost/Learning_Mang_sys/index.html",and run the project 
